@@ -1,0 +1,253 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.5;
+}
+
+.topo {
+  background-color: #1500a8;
+  color: white;
+  padding: 20px 10px 30px;
+  position: relative; /* para posicionar o sino absoluto */
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centraliza horizontalmente */
+  padding: 10px 0;
+  position: relative;
+  max-width: 900px;       /* limita a largura do banner */
+  margin-left: 100px;     /* empurra tudo para a direita */
+}
+
+.foto-grupo {
+  height: 260px;
+  width: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid white;
+  transform: translateX(100px); /* leve deslocamento para a esquerda */
+  flex-shrink: 0;
+}
+
+.boas-vindas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  color: white;
+  transform: translateX(260px);
+}
+
+
+.boas-vindas h1 {
+  font-size: 2.5rem; /* maior */
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+.icone-sino.sino-topo {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+  background: transparent;
+  border: none;
+}
+
+.icone-sino.sino-topo:hover {
+  color: #f3b7a0;
+}
+
+.menu {
+  display: flex;
+  gap: 100px; /* aumenta o espaçamento entre os botões */
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+  margin-bottom: 50px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -20px;
+}
+
+input::placeholder{
+  color:white;
+  opacity: 1;
+}
+.menu button,
+.menu input {
+  background-color: #f3b7a0;
+  border: none;
+  padding: 15px 30px; /* maior altura e largura */
+  border-radius: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu input {
+  max-width: 240px;
+  height: 52px;
+}
+
+
+main {
+  padding: 40px 20px 20px;
+  max-width: 1200px;
+  margin: 20px auto 40px; /* margem top para afastar do topo azul */
+  background-color: transparent;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.centro{
+  justify-content: center;
+  position: relative;
+}
+
+.oficinas {
+  display: flex;
+  gap: 90px; /* espaçamento maior entre as boxes */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.oficina {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.oficina h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.mais,
+.inscrever {
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.mais {
+  background-color: coral;
+}
+
+.mais:hover {
+  background-color: #e66850;
+}
+
+.inscrever {
+  background-color: #62d293;
+}
+
+.inscrever:hover {
+  background-color: #4bb07a;
+}
+
+.centro {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #222;
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+  .banner {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .boas-vindas {
+    align-items: center;
+  }
+  
+  .menu {
+    justify-content: center;
+  }
+  
+  .oficinas {
+    justify-content: center;
+  }
+  
+  .oficina {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner {
+    flex-direction: column;
+  }
+  
+  .foto-grupo {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .boas-vindas h1 {
+    font-size: 1.5rem;
+  }
+  
+  .menu button,
+  .menu input {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .botoes {
+    flex-direction: column;
+  }
+  
+  .mais,
+  .inscrever {
+    margin: 5px 0;
+    flex: none;
+    width: 100%;
+  }
+}

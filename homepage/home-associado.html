@@ -15,38 +15,70 @@
       </div>
     </div>
 
-    <button class="icone-sino sino-topo" aria-label="Notificações">🔔</button>
+      <!-- CAIXA FLEXÍVEL DOS ÍCONES -->
+    <div class="icones-topo">
+      <button class="icone-btn" aria-label="Notificações">
+        <img src="/Amorabi/fotos/sino.png" alt="Notificações" class="icone-img" />
+      </button>
+      <button class="icone-btn" aria-label="Sair">
+        <img src="/Amorabi/fotos/saida.png" alt="Sair" class="icone-img" />
+      </button>
+    </div>
+  </div>
   </header>
 
   <nav class="menu" aria-label="Menu principal">
       <button>Meu perfil</button>
       <button>Oficinas</button>
-      <button>Filtros ⌵</button>
-      <input type="search" placeholder="Pesquisar 🔍" aria-label="Pesquisar oficinas" />
+      <button class="btn-filtros">
+        Filtros
+        <img src="/Amorabi/fotos/seta.png" alt="Seta" class="icone-seta" />
+      </button>
+      <div class="input-com-lupa">
+        <input type="search" placeholder="Pesquisar" aria-label="Pesquisar oficinas" />
+        <img src="/Amorabi/fotos/lupa.png" alt="Lupa" class="icone-lupa" />
+      </div>
   </nav>
 
   <main>
     <h2 class="centro">Próximas oficinas</h2>
     <section class="oficinas">
       <article class="oficina">
+        <img src="/Amorabi/fotos/primeiros_socorros.jpeg" alt="Imagem da oficina" class="imagem-oficina" />
         <h3>Primeiros Socorros</h3>
-        <p><strong>Data:</strong> 10/07/2025 <strong>Início:</strong> 08:00</p>
+        <p><strong>Data:</strong> 10/07/2025</p>
+        <p><strong>Início:</strong> 08:00 <strong>Fim:</strong> 16:00</p>
         <p><strong>Descrição:</strong> Oficina prática de 6 horas que ensina como agir em situações de emergência...</p>
         <p><strong>Local:</strong> Rua dos Esportistas, 510 - Itinga, Joinville</p>
         <div class="botoes">
-          <button class="mais">Mais informações</button>
-          <button class="inscrever">Inscrever-se!</button>
+          <button class="mais">Editar</button>
+          <button class="inscrever">Inscrever</button>
         </div>
       </article>
 
       <article class="oficina">
-        <h3>Oficina de Dança</h3>
-        <p><strong>Data:</strong> 15/07/2025 <strong>Início:</strong> 14:00</p>
-        <p><strong>Descrição:</strong> Aprenda movimentos de dança com profissionais em um ambiente descontraído...</p>
-        <p><strong>Local:</strong> Centro Cultural, Joinville</p>
+        <img src="/Amorabi/fotos/exce_iniciantes.jpeg" alt="Imagem da oficina" class="imagem-oficina" />
+        <h3>Excel para iniciantes</h3>
+        <p><strong>Data:</strong> 23/08/2025</p>
+        <p><strong>Início:</strong> 07:00 <strong>Fim:</strong> 12:00</p>
+        <p><strong>Descrição:</strong> O objetivo deste curso de 8 horas é ensinar o aluno os principais usos do Excel...</p>
+        <p><strong>Local:</strong> Rua dos Esportistas, 510 - Itinga, Joinville</p>
         <div class="botoes">
-          <button class="mais">Mais informações</button>
-          <button class="inscrever">Inscrever-se!</button>
+          <button class="mais">Editar</button>
+          <button class="inscrever">Inscrever</button>
+        </div>
+      </article>
+
+      <article class="oficina">
+        <img src="/Amorabi/fotos/mundo_croche.jpeg" alt="Imagem da oficina" class="imagem-oficina" />
+        <h3>Introdução ao Mundo do Crochê</h3>
+        <p><strong>Data:</strong> 14/06/2025</p>
+        <p><strong>Início:</strong> 10:00 <strong>Fim:</strong> 18:00</p>
+        <p><strong>Descrição:</strong> O objetivo desta oficina de 3 horas é apresentar os fundamentos do crochê...</p>
+        <p><strong>Local:</strong> Rua dos Esportistas, 510 - Itinga, Joinville</p>
+        <div class="botoes">
+          <button class="mais">Editar</button>
+          <button class="inscrever">Inscrever</button>
         </div>
       </article>
     </section>

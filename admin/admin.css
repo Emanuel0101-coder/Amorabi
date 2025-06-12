@@ -11,21 +11,22 @@ body {
   line-height: 1.5;
 }
 
+/* TOPO */
 .topo {
   background-color: #1500a8;
   color: white;
   padding: 20px 10px 30px;
-  position: relative; /* para posicionar o sino absoluto */
+  position: relative;
 }
 
 .banner {
   display: flex;
   align-items: center;
-  justify-content: center; /* centraliza horizontalmente */
+  justify-content: center;
   padding: 10px 0;
   position: relative;
-  max-width: 900px;       /* limita a largura do banner */
-  margin-left: 100px;     /* empurra tudo para a direita */
+  max-width: 900px;
+  margin-left: 100px;
 }
 
 .foto-grupo {
@@ -34,7 +35,7 @@ body {
   border-radius: 12px;
   object-fit: cover;
   border: 3px solid white;
-  transform: translateX(100px); /* leve deslocamento para a esquerda */
+  transform: translateX(100px);
   flex-shrink: 0;
 }
 
@@ -48,34 +49,39 @@ body {
   transform: translateX(260px);
 }
 
-
 .boas-vindas h1 {
-  font-size: 2.5rem; /* maior */
+  font-size: 2.5rem;
   margin: 0 0 10px 0;
   color: white;
 }
 
-.icone-sino.sino-topo {
+/* ÍCONES DO TOPO */
+.icones-topo {
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 20px;
-  font-size: 2.2rem;
-  cursor: pointer;
-  color: white;
-  transition: color 0.3s ease;
+  display: flex;
+  gap: 15px;
+}
+
+.icone-btn {
   background: transparent;
   border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
-.icone-sino.sino-topo:hover {
-  color: #f3b7a0;
+.icone-img {
+  width: 32px;
+  height: 32px;
 }
 
+/* MENU */
 .menu {
   display: flex;
-  gap: 30px; /* antes era 100px */
+  gap: 30px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 30px 10px;
   margin-bottom: 50px;
   border-radius: 12px;
@@ -84,23 +90,29 @@ body {
   margin-right: auto;
   position: relative;
   top: -20px;
+  overflow-x:  auto;
 }
 
-input::placeholder{
-  color:white;
-  opacity: 1;
-}
 .menu button,
 .menu input {
   background-color: #f3b7a0;
   border: none;
-  padding: 15px 30px; /* maior altura e largura */
+  padding: 15px 30px;
   border-radius: 25px;
   font-weight: bold;
   color: #ffffff;
+  width: 270px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+/*Largura fixa para uniformizar os botões */
+.menu button {
+  width: 180px; /* Tamanho mínimo comum */
+  padding: 10px 15px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .menu input {
@@ -108,11 +120,17 @@ input::placeholder{
   height: 52px;
 }
 
+input::placeholder {
+  color: white;
+  opacity: 1;
+}
 
+
+/* MAIN */
 main {
   padding: 40px 20px 20px;
   max-width: 1200px;
-  margin: 20px auto 40px; /* margem top para afastar do topo azul */
+  margin: 20px auto 40px;
   background-color: transparent;
 }
 
@@ -122,17 +140,19 @@ h2 {
   color: #222;
 }
 
-.centro{
-  justify-content: center;
-  position: relative;
+.centro {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #222;
 }
 
+/* OFICINAS */
 .oficinas {
-  display: flex;
-  gap: 90px; /* espaçamento maior entre as boxes */
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
 }
 
 .oficina {
@@ -144,6 +164,15 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* NOVO BLOCO DE IMAGEM DAS OFICINAS */
+.imagem-oficina {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .oficina h3 {
@@ -187,36 +216,27 @@ h2 {
   background-color: #4bb07a;
 }
 
-.centro {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 10px;
-  color: #222;
-}
-
-/* Responsividade */
-
+/* RESPONSIVO */
 @media (max-width: 900px) {
   .banner {
     justify-content: center;
     text-align: center;
   }
-  
+
   .boas-vindas {
     align-items: center;
   }
-  
+
   .menu {
     justify-content: center;
   }
-  
+
   .oficinas {
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-  
+
   .oficina {
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
   }
 }
 
@@ -224,30 +244,72 @@ h2 {
   .banner {
     flex-direction: column;
   }
-  
+
   .foto-grupo {
     height: 100px;
     width: 100px;
   }
-  
+
   .boas-vindas h1 {
     font-size: 1.5rem;
   }
-  
+
   .menu button,
   .menu input {
     padding: 8px 15px;
     font-size: 0.9rem;
   }
-  
+
   .botoes {
     flex-direction: column;
   }
-  
+
   .mais,
   .inscrever {
     margin: 5px 0;
     flex: none;
     width: 100%;
   }
+}
+
+.oficina p {
+  margin: 4px 0;
+  line-height: 1.3;
+  font-size: 0.95rem;
+}
+
+.oficina h3 {
+  font-size: 1.4rem;      /* Tamanho maior */
+  margin-top: 5px;
+  margin: 10px 0;         /* Espaçamento sutil */
+  text-align: center;     /* Centraliza o texto */
+  color: #222;            /* Mantém boa leitura */
+}
+
+.input-com-lupa {
+  position: relative;
+  max-width: 240px; /* igual ao seu input original */
+  width: 100%;
+}
+
+.input-com-lupa input {
+  width: 100%;
+  padding: 15px 45px 15px 20px; /* espaço maior à direita para a lupa */
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.icone-lupa {
+  position: absolute;
+  top: 50%;
+  right: 15px;  /* distância da borda direita */
+  transform: translateY(-50%);
+  width: 24px;  /* tamanho da lupa */
+  height: 24px;
+  pointer-events: none; /* para não atrapalhar o clique no input */
+  opacity: 0.7; /* opcional, para dar um efeito mais suave */
 }

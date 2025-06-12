@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Oficinas</title>
+  <link rel="stylesheet" href="cadastrooficinas.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="esquerda-topo">
+    <span><img src="../fotos/voltar.png" alt="Icone voltar"> </span>
+    <h1 id="cadastro">Cadastrar Oficinas</h1>
+    </div>
+    <div class="direita-topo">
+      <span><img src="../fotos/home.png" alt="Icone home"></span>
+      <span><img src="../fotos/user2.png" alt="Icone user"></span>
+    </div>
+  </header>
+
+  <main class="form-container">
+    <form class="form-oficina">
+      <div class="coluna-esquerda">
+        <label>Título da oficina
+          <input type="text" placeholder="Insira o nome da oficina">
+        </label>
+
+        <label>Descrição
+          <textarea placeholder="Insira a descrição da oficina"></textarea>
+        </label>
+
+        <label>Imagem</label>
+        <div class="imagem-upload">
+          <div class="preview-imagem"><img src="../fotos/camera.png" alt="Camera"></div>
+          <div class="botoes-upload">
+            <button type="button" class="upload">Upload</button>
+            <button type="button" class="foto">Tirar foto</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="coluna-meio">
+        <label>Data
+          <input type="text" placeholder="__/__/__">
+        </label>
+
+        <label>Horário de início
+          <input type="time">
+        </label>
+
+        <label>Tema
+          <input type="text" placeholder="Informe o tema">
+        </label>
+
+        <label>Instrutor
+          <input type="text" placeholder="Informe o nome instrutor">
+        </label>
+
+
+      </div>
+
+      <div class="coluna-direita">
+        <label>Nº de vagas
+          <input type="number" placeholder="Insira o nº de vagas">
+        </label>
+
+        <label>Horário de término
+          <input type="time">
+        </label>
+
+        <label>Categoria
+          <select>
+            <option>Selecione</option>
+            <option>Artes manuais</option>
+            <option>Arte e Cultura</option>
+            <option>Culinária</option>
+            <option>Empreendedorismo</option> 
+            <option>Idioma</option>
+            <option>Informática</option>
+            <option>Marketing</option>
+            <option>Saúde</option>
+            <option>Teatro</option>
+          </select>
+        </label>
+
+        <label>Idade Recomendada
+          <select>
+            <option>Selecione</option>
+            <option>Acima de 4 anos</option>
+            <option>Acima de 8 anos</option>
+            <option>Acima de 12 anos</option>
+            <option>Acima de 18 anos</option>
+            <option>Acima de 25 anos</option>
+            <option>Acima de 30 anos</option>
+            <option>Acima de 50 anos</option>
+            <option>Acima de 60 anos</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="area-botao">
+        <button type="submit" class="botao-cadastrar">Cadastrar</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+ 
+body, html {
+    height: 100%;
+}
+ 
+/* LOGO FIXO NO TOPO */
+.logo {
+    width: 160px; /* Tamanho do logo */
+    position: fixed; /* Fixa o logo na viewport */
+    top: 1px; /* 20px de distância do topo da tela */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    z-index: 1000; /* Garante que o logo fique acima de outros elementos */
+    margin-top: -35px;
+}
+ 
+.background {
+    background: url('../fotos/background.png') no-repeat center center/cover;
+    width: 100%;
+    min-height: 100vh; /* Garante que o background ocupe a altura total da viewport */
+    display: flex;
+    flex-direction: column; /* Para empilhar o conteúdo (se houver mais que o form) */
+    align-items: center; /* Centraliza o formulário horizontalmente */
+    justify-content: center; /* Centraliza o formulário verticalmente */
+    padding-top: 100px; /* Adiciona um padding no topo para o formulário não ficar atrás da logo */
+    position: relative; /* Necessário se houver outros elementos posicionados dentro dele */
+}
+ 
+.login-box {
+    background-color: #1f00b4;
+    padding: 40px 60px;
+    margin-bottom: 800px;
+    border-radius: 12px;
+    color: white;
+    width: 60%; /* Ajuste para ter mais espaço nas laterais e acomodar as duas colunas */
+    max-width: 900px; /* Defina uma largura máxima para o formulário */
+    /* Removemos o margin-top aqui, pois o padding-top do .background já cuida disso */
+    /* margin-top: 140px; foi removido */
+
+    /* PROPRIEDADES PARA DUAS COLUNAS */
+    display: flex; /* Habilita o Flexbox */
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a próxima linha em telas menores */
+    justify-content: space-between; /* Distribui o espaço entre as colunas */
+    gap: 30px; /* Espaçamento entre as colunas e as linhas */
+}
+ 
+h2 {
+    font-weight: 600;
+    margin-bottom: 25px; /* Aumentei um pouco o espaçamento abaixo do título */
+    font-size: 1.5rem; /* Aumentei o tamanho do título para destaque */
+    width: 100%; /* Garante que o título ocupe a largura total */
+    text-align: center; /* Centraliza o título */
+    color: white;
+}
+ 
+.input-group {
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Aumentei o espaçamento entre os grupos de input */
+    padding: 12px; /* Aumentei o padding interno dos inputs para mais altura */
+}
+ 
+.input-group .icon {
+    font-size: 1.4rem; /* Ícone um pouco maior */
+    margin-right: 12px; /* Mais espaço entre ícone e texto */
+    color: #333;
+}
+ 
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+    padding: 0; /* Garante que não haja padding extra nos inputs */
+    background: transparent; /* Garante que o fundo do input seja transparente */
+}
+
+/* Ajuste específico para o input de data para evitar corte */
+.input-group input[type="date"] {
+    min-height: 24px; /* Garante que o campo de data tenha uma altura mínima */
+}
+
+/* Placeholder color for all inputs */
+.input-group input::placeholder {
+    color: #888;
+}
+
+
+.forgot {
+    display: block;
+    margin: 5px 0 15px;
+    color: red;
+    font-size: 0.85rem;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+ 
+.login-btn {
+    background-color: #4da594;
+    color: white;
+    border: none;
+    padding: 15px; /* Aumentei o padding do botão */
+    width: 30%;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: -30px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #EE4902;
+  color: white;
+  font-weight: bold;
+}
+ 
+.ou {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+ 
+.google-btn {
+    background: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+ 
+.google-btn img {
+    width: 30px;
+    height: 30px;
+}
+ 
+.signup {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+}
+ 
+.signup a {
+    color: white;
+    text-decoration: underline;
+}
+ 
+/* ESTILOS PARA AS COLUNAS DO FORMULÁRIO */
+.lado-esquerdo,
+.lado-direito {
+    flex: 1; /* Faz com que cada coluna ocupe o espaço disponível igualmente */
+    min-width: 350px; /* Aumentei a largura mínima para dar mais respiro aos campos */
+    display: flex;
+    flex-direction: column;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 992px) { /* Ajuste para telas um pouco menores que desktop */
+    .login-box {
+        padding: 30px 40px;
+        width: 90%;
+        max-width: 700px;
+        gap: 20px;
+    }
+
+    .lado-esquerdo,
+    .lado-direito {
+        min-width: unset; /* Permite que a largura mínima seja flexível */
+        flex: 1 1 100%; /* Faz com que as colunas ocupem 100% em telas menores, empilhando-as */
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .background {
+        padding-top: 80px; /* Menos padding no topo para telas menores */
+    }
+    .login-box {
+        flex-direction: column; /* Coloca as colunas uma abaixo da outra em telas menores */
+        padding: 30px; /* Ajusta o padding */
+        width: 95%; /* Ocupa mais largura em telas menores */
+        gap: 0; /* Remove o gap quando as colunas estão empilhadas */
+    }
+
+    .lado-esquerdo,
+    .lado-direito {
+        width: 100%; /* Garante que ocupem 100% da largura do pai */
+    }
+
+    .logo {
+        width: 120px; /* Ajusta o tamanho do logo para telas menores */
+        top: 15px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+        padding: 8px;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+.botao-centro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

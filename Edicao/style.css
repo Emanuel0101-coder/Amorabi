@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #e8f0ff;
+  padding: 20px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b0d95;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.top-bar h1 {
+  font-size: 20px;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.back-arrow {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.top-icons img {
+  width: 24px;
+  margin-left: 12px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.image-section img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.form-section {
+  margin-top: 20px;
+}
+
+.field label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.field input {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #ececec;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.field p {
+  font-size: 14px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+}
+
+.grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.info-item {
+  font-size: 14px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.endereco .map {
+  margin-top: 8px;
+  width: 160px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.inscritos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counter {
+  background-color: #22c55e;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 70px;
+  text-align: center;
+}
+
+.btn-inscrever {
+  background: linear-gradient(to right, #0044ff, #0a1d9c);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-edicao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.col-esquerda {
+  flex: 1;
+  min-width: 300px;
+}
+
+.col-direita {
+  flex: 1;
+  min-width: 280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.imagem-upload {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.imagem-upload img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+.botoes-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-upload {
+  background-color: #fca5a5;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-foto {
+  background-color: #4ade80;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botoes-final {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-editar {
+  background-color: #2b0dab;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}

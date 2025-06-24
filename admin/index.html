@@ -19,7 +19,7 @@
       <button class="icone-btn" aria-label="Notificações">
         <img src="/Amorabi/fotos/sino.png" alt="Notificações" class="icone-img" />
       </button>
-      <button class="icone-btn" aria-label="Sair">
+      <button id="btnSair" class="icone-btn" aria-label="Sair">
         <img src="/Amorabi/fotos/saida.png" alt="Sair" class="icone-img" />
       </button>
     </div>
@@ -27,15 +27,16 @@
   </header>
 
   <nav class="menu" aria-label="Menu principal">
-    <button>Meu perfil</button>
-    <button>Cadastrar oficinas</button>
-    <button>Usuários</button>
-    <button>Cronograma</button>
-    <div class="input-com-lupa">
-      <input type="search" placeholder="Pesquisar" aria-label="Pesquisar oficinas" />
-      <img src="/Amorabi/fotos/lupa.png" alt="Lupa" class="icone-lupa" />
-    </div>
-  </nav>
+  <button id="btnPerfil">Meu perfil</button>
+  <button id="btnCadastrar">Cadastrar oficinas</button>
+  <button id="btnUsuarios">Usuários</button>
+  <button id="btnCronograma">Cronograma</button>
+  <div class="input-com-lupa">
+    <input type="search" placeholder="Pesquisar" aria-label="Pesquisar oficinas" />
+    <img src="/Amorabi/fotos/lupa.png" alt="Lupa" class="icone-lupa" />
+  </div>
+</nav>
+
 
   <main>
     <h2 class="centro">Próximas oficinas</h2>
@@ -62,7 +63,7 @@
         <p><strong>Descrição:</strong> O objetivo deste curso de 8 horas é ensinar o aluno os principais usos do Excel...</p>
         <p><strong>Local:</strong> Rua dos Esportistas, 510 - Itinga, Joinville</p>
         <div class="botoes">
-          <button class="mais">Editar</button>
+          <button class="mais" onclick="window.location.href='../Edicao/Editar.html'">Editar</button>
           <button class="inscrever">Inscrever</button>
         </div>
       </article>
@@ -81,5 +82,6 @@
       </article>
    </section>
   </main>
+  <script src="admin.js"></script>
 </body>
 </html>

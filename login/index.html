@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class="background">
-    
+
     <!-- LOGO FORA DA CAIXA -->
     <img src="/Amorabi/fotos/logo.png" alt="Logo Amorabi" class="logo" />
 
@@ -20,18 +20,18 @@
       <h2>Seja bem-vindo ao Amorabi!</h2>
 
       <div class="input-group">
-        <span class="icon">👤</span>
+        <img src="../fotos/user.png" alt="Usuário" class="icon" />
         <input type="text" placeholder="Insira seu e-mail ou telefone" />
       </div>
 
       <div class="input-group">
-        <span class="icon">🔑</span>
+        <img src="../fotos/senha.png" alt="Senha" class="icon" />
         <input type="password" placeholder="Insira sua senha" />
       </div>
 
       <a href="#" class="forgot">Esqueceu a senha?</a>
-
-      <button class="login-btn">Entrar</button>
+      <!-- Corrigido: botão com id, sem onclick direto -->
+      <button class="login-btn" id="btnEntrar">Entrar</button>
 
       <p class="ou">ou</p>
 
@@ -39,8 +39,11 @@
         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Login com Google" />
       </button>
 
-      <p class="signup">Não tem uma conta? <a href="#">Crie sua conta aqui</a></p>
+      <p class="signup">Não tem uma conta? <a href="../criarconta/index.html">Crie sua conta aqui</a></p>
     </div>
   </div>
+
+  <!-- Script externo -->
+  <script src="login.js"></script>
 </body>
 </html>

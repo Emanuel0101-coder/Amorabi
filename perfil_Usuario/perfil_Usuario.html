@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+     <link rel="shortcut icon" href="../fotos/favicon.ico" type="image/x-icon">
+    <title>Meu Perfil</title>
+</head>
+<body>
+
+    <!-- Header com botão hamburguer e ícone home para mobile -->
+    <header>
+        <div class="menu-btn" id="menu-btn">&#9776;</div>
+        <a href="#" class="home-link header-home">
+            <img src="../fotos/casa.png" alt="Home" class="home-icon">
+        </a>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <a href="#" class="seta-link header-seta">
+            <img src="../fotos/seta-direita.png" alt="Seta" class="seta-icon">
+        </a>
+
+        <div class="profile">
+            <div class="avatar-container">
+                <div class="avatar"></div>
+                <a href="#" class="add-btn">+</a>
+            </div>
+            <p>Bem-vindo(a) <span>[nome]</span>!</p>
+        </div>
+
+        <ul>
+            <li><a href="#" class="active"><img src="../fotos/perfil-de-usuario.png" class="img-hamb"><p>Meu perfil</p></a></li>
+            <li><a href="#"><img src="../fotos/construcao.png" class="img-hamb"><p>Minhas inscrições</p></a></li>
+            <li><a href="#"><img src="../fotos/historia.png" class="img-hamb"><p>Histórico</p></a></li>
+            <li><a href="#" class="logout"><img src="../fotos/sair.png" class="img-hamb"><p>Sair</p></a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="perfil">
+            <h2>Meu Perfil</h2>
+            <form>
+                <div class="img-input">
+                    <img src="../fotos/user.png" class="img-icon" alt="Ícone de Usuário">
+                    <input type="text" placeholder="Nome Completo">
+                </div>
+                <div class="img-input">
+                    <img src="../fotos/email.png" class="img-icon" alt="Ícone de E-mail">
+                    <input type="email" placeholder="E-mail">
+                </div>
+                <div class="img-input">
+                    <img src="../fotos/cpf.png" class="img-icon" alt="Ícone de Cadeado">
+                    <input type="text" placeholder="CPF" disabled>
+                    <img src="..    /fotos/cadeado-seguro.png" class="img-icon" alt="Ícone de Cadeado">
+                </div>
+                <div class="img-input">
+                    <img src="../fotos/telefone.png" class="img-icon" alt="Ícone de Telefone">
+                    <input type="tel" placeholder="Telefone">
+                </div>
+                <div class="img-input">
+                    <img src="../fotos/festa.png" class="img-icon" alt="Ícone de Festa">
+                    <input type="date" placeholder="Data de nascimento" disabled>
+                    <img src="../fotos/cadeado-seguro.png" class="img-icon" alt="Ícone de Cadeado">
+                </div>
+                <div class="img-input">
+                    <img src="../fotos/senha.png" class="img-icon" alt="Ícone de Chave">
+                    <input type="password" placeholder="Senha">
+                </div>
+            </form>
+        </section>
+
+        <button type="submit" id="editar">
+            <img id="img-editar" src="../fotos/editar.png" alt="">Editar dados
+        </button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

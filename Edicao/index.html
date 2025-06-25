@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Oficina</title>
+  <link rel="stylesheet" href="veroficina.css">
+  <link rel="shortcut icon" href="../fotos/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="topo">
+  <div class="esquerda-topo">
+    <a href="../admin/index.html" aria-label="Voltar para a página inicial">
+      <span><img src="../fotos/voltar.png" alt="Icone voltar"></span>
+    </a>
+    <h1 id="cadastro">Editar Oficina</h1>
+  </div>
+  <div class="direita-topo">
+    <a href="../admin/index.html" aria-label="Ir para a página inicial">
+      <span><img src="../fotos/home.png" alt="Icone home"></span>
+    </a>
+  </div>
+</header>
+
+  <main class="form-container">
+    <form class="form-oficina">
+      <div class="coluna-esquerda">
+        <label>Título da oficina
+          <input type="text" value="Excel para iniciantes">
+        </label>
+
+        <label>Descrição
+          <textarea rows="5">O objetivo deste  curso de 8 horas é guiar o  aluno pelos primeiros passos no Excel, ensinando o uso de fórmulas básicas, formatação, tabelas e gráficos.</textarea>
+        </label>
+
+        <label>Imagem</label>
+        <div class="imagem-upload">
+          <div class="preview-imagem"><img src="../fotos/exce_iniciantes.jpeg" alt="Camera"></div>
+          <div class="botoes-upload">
+            <button type="button" class="upload">Upload</button>
+            <button type="button" class="foto">Tirar foto</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="coluna-meio">
+        <label>Data
+          <input type="text" value="28/06/2025">
+        </label>
+
+        <label>Horário de início
+          <input type="time" value="08:00">
+        </label>
+
+        <label>Tema
+          <input type="text" value="Pacote Office">
+        </label>
+
+        <label>Instrutor
+          <input type="text" value="Dr. Eduardo Sérgio">
+        </label>
+
+
+      </div>
+
+      <div class="coluna-direita">
+        <label>Nº de vagas
+          <input type="number" value="40">
+        </label>
+
+        <label>Horário de término
+          <input type="time" value="18:00">
+        </label>
+
+        <label>Categoria
+          <select>
+            <option>Informática</option>
+            <option>Artes manuais</option>
+            <option>Arte e Cultura</option>
+            <option>Culinária</option>
+            <option>Empreendedorismo</option> 
+            <option>Idioma</option>
+            <option>Marketing</option>
+            <option>Saúde</option>
+            <option>Teatro</option>
+          </select>
+        </label>
+
+        <label>Idade Recomendada
+          <select>
+            <option>Acima de 12 anos</option>
+            <option>Selecione</option>
+            <option>Acima de 4 anos</option>
+            <option>Acima de 8 anos</option>
+            <option>Acima de 18 anos</option>
+            <option>Acima de 25 anos</option>
+            <option>Acima de 30 anos</option>
+            <option>Acima de 50 anos</option>
+            <option>Acima de 60 anos</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="area-botao">
+        <button type="submit" class="botao-cadastrar">Editar</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

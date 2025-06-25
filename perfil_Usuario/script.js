@@ -20,3 +20,20 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
     menuBtn.innerHTML = '&#9776;';
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tipoUsuario = localStorage.getItem('tipoUsuario');
+
+  // Seta os botões de navegação conforme o tipo
+  const homeLink = document.querySelector('.home-link');
+  const setaLink = document.querySelector('.seta-link');
+
+  if (tipoUsuario === 'admin') {
+    homeLink.href = '../admin/index.html';
+    setaLink.href = '../admin/index.html';
+  } else {
+    // Se não for admin, manda pra homepage de associados
+    homeLink.href = '../homepage/index.html';
+    setaLink.href = '../homepage/index.html';
+  }
+});
